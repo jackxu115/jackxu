@@ -1,3 +1,15 @@
+.nav {
+    position: fixed;
+    height: 250px;
+    top: 0;
+    left: 900px;
+}
+
+#nav {
+    display: block;
+    height: 250px;
+}
+
 li {
     float: right;
     text-align: center;
@@ -8,7 +20,8 @@ li {
 
 nav .links a {
     text-decoration: none;
-    color: aliceblue;
+    color: white;
+    display: block;
 }
 
 ul {
@@ -19,7 +32,6 @@ ul {
 }
 
 header nav .link {
-    display: flex;
     width: 150px;
     max-width: 50%;
     min-width: 30%;
@@ -30,5 +42,114 @@ body {
 
 .link:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
+
+.name {
+    padding-top: 200px;
+}
+#name {
+    display: block;
+    color: white;
+    font-size: 200px;
+    font-family: monospace;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+#intro {
+    color: rgba(238, 186, 54, 0.8);
+    font-size: 70px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    font-family: monospace;
+    overflow: hidden;
+    animation: fadeIn ease-in-out 8s infinite;
+    margin-top: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+    }
+
+}
+
+#about {
+    height: 700px;
+    margin-top: 400px;
+}
+
+p {
+    color: white;
+    font-size: 40px;
+    margin-left: 200px;
+}
+
+#AboutMe {
+    font-size: 80px;
+    color: rgba(100, 123, 229, 1);
+    margin-left: 200px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+#skills {
+    height: 700px;
+    margin-top: 400px;
+}
+
+#MySkills {
+    font-size: 80px;
+    color: rgba(100, 123, 229, 1);
+    margin-left: 200px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+h3 {
+    color: white;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.column {
+    float: left;
+    padding: 40px 5px;
+    width: 15%;
+}
+
+.row {
+    margin-left: 200px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(26, 24, 24, 1);
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
+
 
