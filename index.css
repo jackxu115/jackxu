@@ -15,7 +15,7 @@ li {
     text-align: center;
     font-size: 30px;
     display: flex;
-    font-family: Tahoma;
+    font-family: monospace;
 }
 
 nav .links a {
