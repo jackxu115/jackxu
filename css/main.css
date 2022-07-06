@@ -91,8 +91,10 @@ body {
 
 p {
     color: white;
-    font-size: 40px;
+    font-size: 26px;
     margin-left: 100px;
+    font-family: monospace;
+    width: 550px;
 }
 
 #AboutMe {
