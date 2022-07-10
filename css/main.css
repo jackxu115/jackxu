@@ -1,73 +1,121 @@
-.nav {
-    position: fixed;
-    height: 250px;
-    top: 0;
-    left: 500px;
-}
-
-#nav {
-    display: block;
-    height: 250px;
-}
-
-li {
-    float: right;
-    text-align: center;
-    font-size: 30px;
-    display: flex;
-    font-family: monospace;
-}
-
-nav .links a {
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-
-ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin-right: 150px;
-}
-
-header nav .link {
-    width: 150px;
-    max-width: 50%;
-    min-width: 30%;
-}
 body {
     background-color: black;
+    color: white;
+    font-family: monospace;
+    margin: 0;
+}
+.body {
+    display: flex;
+    flex-direction: column;
 }
 
-.link:hover {
+.backgroundImage {
+    background: url("../png/galaxy1.jpg");
+    position: fixed;
+    height: 100%;
+    width: 2250px;
+    z-index: -1;
+    animation: slide 60s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-750px,0,0);
+    }
+}
+
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgba(70, 72, 82, 1);
+    width: 100%
+}
+
+.navLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.contactList {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contactList img {
+    height: 50px;
+    width: 50px;
+}
+
+.navRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-right: 40px;
+    padding-left: 400px;
+}
+
+.links {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.links:hover {
     cursor: pointer;
-    text-decoration: underline;
 }
 
 .name {
-    padding-top: 200px;
-}
-#name {
-    display: block;
-    color: white;
-    font-size: 200px;
-    font-family: monospace;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 600px;
 }
 
+#name {
+    font-size: 200px;
+    font-style: italic;
+    margin: 0;
+    padding-top: 80px;
+}
+
+/*#lastName {*/
+/*    color: dimgray;*/
+/*}*/
+
 #intro {
-    color: rgba(238, 186, 54, 0.8);
-    font-size: 70px;
-    text-align: center;
-    font-weight: bold;
-    display: block;
-    font-family: monospace;
-    overflow: hidden;
+    font-size: 60px;
+    color: orange;
     animation: fadeIn ease-in-out 8s infinite;
-    margin-top: 0;
 }
 
 @keyframes fadeIn {
@@ -80,83 +128,137 @@ body {
     100% {
         opacity: 0;
     }
-
 }
 
-#about {
-    height: 700px;
-    margin-top: 400px;
-    padding-top: 50px;
+h2 {
+    font-size: 60px;
+    margin: 0;
+    padding-left: 30px;
+    padding-bottom: 20px;
 }
 
-p {
-    color: white;
-    font-size: 26px;
-    margin-left: 100px;
-    font-family: monospace;
-    width: 550px;
+.about, .skills, .projects {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
 }
 
-#AboutMe {
-    font-size: 80px;
-    color: rgba(100, 123, 229, 1);
-    margin-left: 100px;
-    font-family: monospace;
-    font-weight: bold;
+.aboutContent {
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding-left: 50px;
+    align-items: center;
 }
 
-#skills {
-    height: 700px;
-    margin-top: 400px;
-    padding-top: 50px;
+.aboutImg img{
+    height: 350px;
+    width: 350px;
 }
 
-#MySkills {
-    font-size: 80px;
-    color: rgba(100, 123, 229, 1);
-    margin-left: 100px;
-    font-family: monospace;
-    font-weight: bold;
+.aboutList ul {
+    list-style-type: none
+}
+
+.aboutList ul li {
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.skillList {
+    display: flex;
+    padding-left: 50px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.skillCard {
+    width: 100px;
+    height: 100px;
+    padding: 16px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(70,72,82, 0.5);
+    border-radius: 30px;
+}
+
+.skillCard img {
+    height: 60px;
+    width: 60px;
 }
 
 h3 {
-    color: white;
-    font-family: monospace;
-    font-weight: bold;
     font-size: 20px;
-    margin-top: 5px;
-}
-
-.column {
-    float: left;
-    padding: 30px 5px;
-    width: 15%;
-}
-
-.row {
-    margin-left: 100px;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.card {
+    margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: rgba(26, 24, 24, 1);
-    border-radius: 10px;
-    height: 120px;
-    width: 120px;
 }
 
-.card:hover {
-    transform: scale(1.2);
-}.card img {
-    height: 70px;
-    width: 70px;
- }
+.skillCard:hover {
+    transform: scale(1.3);
+}
+
+.projects {
+    padding-bottom: 50px;
+}
+
+.projectList {
+    display: flex;
+    padding-left: 50px;
+    padding-top: 20px;
+    gap: 50px;
+}
+
+.projectList img {
+    height: 300px;
+    width: 300px;
+}
+
+.projectCard {
+    background-color: rgba(70, 72, 85, 0.5);
+    width: 320px;
+    height: 400px;
+    border-radius: 40px;
+}
+
+.projectCard h3 {
+    font-size: 30px;
+}
+
+.cardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+.projectCard:hover .cardInner {
+    transform: rotateY(180deg);
+}
+
+.cardFront, .cardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.cardBack {
+    transform: rotateY(180deg);
+    padding-top: 30px;
+}
+
+.cardBack p {
+    font-size: 16px;
+    text-align: left;
+    width: 80%;
+    padding: 20px;
+}
 
 
