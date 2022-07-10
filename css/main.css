@@ -182,8 +182,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(70,72,82, 0.5);
-    border-radius: 30px;
+    border-radius: 10px;
+    background-color: rgba(70, 72, 85, 0.8);
 }
 
 .skillCard img {
@@ -202,7 +202,7 @@ h3 {
 }
 
 .projects {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 .projectList {
@@ -220,14 +220,14 @@ h3 {
 }
 
 .projectCard {
-    background-color: rgba(70, 72, 85, 0.5);
     width: 320px;
-    height: 400px;
+    height: 350px;
     border-radius: 40px;
 }
 
 .projectCard h3 {
     font-size: 30px;
+    padding-top: 40px;
 }
 
 .cardInner {
@@ -252,9 +252,13 @@ h3 {
     backface-visibility: hidden;
 }
 
+.cardFront {
+    background-color: rgba(70,72,82, 0.8);
+}
+
 .cardBack {
     transform: rotateY(180deg);
-    padding-top: 30px;
+    background-color: rgba(70, 72, 85, 1);
 }
 
 .cardBack p {
